@@ -16,4 +16,10 @@ public class MenuItem {
         this.category = category;
         this.dateAdded = new Date();
     }
+
+    public String toString(){
+        return name + '\n' + description + '\n' + "$" + price + '\n' + category + '\n' + dateAdded;
+    }
+
+
 }

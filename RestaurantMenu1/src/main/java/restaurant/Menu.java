@@ -12,4 +12,14 @@ public class Menu {
         menuItems.add(menuItem);
     }
 
+    public void removeMenuItem(MenuItem menuItem){
+        menuItems.remove(menuItem);
+    }
+
+    public void printMenu(){
+        for(MenuItem item:menuItems){
+            System.out.println(item + "\n*****");
+        }
+    }
+
 }
