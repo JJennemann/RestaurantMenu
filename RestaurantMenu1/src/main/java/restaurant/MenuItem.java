@@ -1,6 +1,4 @@
-package org.example;
-
-
+package restaurant;
 
 import java.util.Date;
 
