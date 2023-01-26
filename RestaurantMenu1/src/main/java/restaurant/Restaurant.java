@@ -31,8 +31,17 @@ public class Restaurant {
         currentMenu.addMenuItem(appTwo);
         currentMenu.addMenuItem(dessertOne);
 
-        currentMenu.removeMenuItem(dessertOne);
+//        currentMenu.removeMenuItem(dessertOne);
 
-        currentMenu.printMenu();
+//        currentMenu.printMenu();
+//        System.out.println(currentMenu.getMenuItems().size());
+        System.out.println(currentMenu);
+
+        System.out.println(entreeOne.equals(entreeTwo));
+
+        MenuItem entreeFour = new MenuItem("Meatloaf", "Meatloaf better than your mommas!",
+                16.99, "Entree");
+
+        currentMenu.addMenuItem(entreeFour);
     }
 }
