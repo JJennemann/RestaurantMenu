@@ -1,20 +1,22 @@
 package restaurant;
 
 import java.util.Date;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class MenuItem {
     private String name;
     private String description;
     private double price;
     private String category;
-    private Date dateAdded;
+    private final LocalDate dateAdded;
 
     public MenuItem(String name, String description, double price, String category){
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
-        this.dateAdded = new Date();
+        this.dateAdded = LocalDate.now();
     }
 
     public String getName() {
@@ -49,7 +51,7 @@ public class MenuItem {
         this.category = category;
     }
 
-    public Date getDateAdded() {
+    public LocalDate getDateAdded() {
         return dateAdded;
     }
 
@@ -78,7 +80,10 @@ public class MenuItem {
     }
 
     boolean isNew(){
-        return true;
+        LocalDate today = LocalDate.now();
+        double daysBetween = dateAdded.until(today, ChronoUnit.DAYS);
+        System.out.println(daysBetween + " days since " + name + " was added");
+        return daysBetween < 90;
     }
 
 }

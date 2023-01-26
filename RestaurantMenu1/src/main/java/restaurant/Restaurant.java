@@ -43,5 +43,8 @@ public class Restaurant {
                 16.99, "Entree");
 
         currentMenu.addMenuItem(entreeFour);
+
+        entreeOne.isNew();
+
     }
 }
